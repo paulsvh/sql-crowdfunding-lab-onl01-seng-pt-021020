@@ -12,7 +12,7 @@ describe "crowdfunder sql" do
     end
 
     it "creates a projects table with an id as a primary key" do
-      expect(@db.execute("PRAGMA table_info(projects);").detect { |arr| arr[-1] == 1 && arr[2] == "INTEGER" }.length).to eq(6)
+      expect(@db.execute("PRAGMA table_info(projects);").detect { |arr| arr[-1] == 1 && arr[2] == "integer" }.length).to eq(6)
     end
 
     it "creates a projects table with a title field" do
@@ -36,7 +36,7 @@ describe "crowdfunder sql" do
     end
 
     it "creates a users table with an id as a primary key" do
-      expect(@db.execute("PRAGMA table_info(users);").detect { |arr| arr[-1] == 1 && arr[2] == "INTEGER" }.length).to eq(6)
+      expect(@db.execute("PRAGMA table_info(users);").detect { |arr| arr[-1] == 1 && arr[2] == "integer" }.length).to eq(6)
     end
 
     it "creates a users table with a name field" do
@@ -48,7 +48,7 @@ describe "crowdfunder sql" do
     end
 
     it "creates a pledges table with an id as a primary key" do
-      expect(@db.execute("PRAGMA table_info(pledges);").detect { |arr| arr[-1] == 1 && arr[2] == "INTEGER" }.length).to eq(6)
+      expect(@db.execute("PRAGMA table_info(pledges);").detect { |arr| arr[-1] == 1 && arr[2] == "integer" }.length).to eq(6)
     end
 
     it "creates a pledges table with an amount field" do
